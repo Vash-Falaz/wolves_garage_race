@@ -1,0 +1,241 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* HEADER */
+
+header{
+background:black;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+/* HERO */
+
+.hero{
+height:500px;
+background-image:url("moto.jpg");
+background-size:cover;
+display:flex;
+align-items:center;
+padding-left:80px;
+color:white;
+}
+
+.hero span{
+color:gold;
+}
+
+.btn-wsp{
+background:green;
+color:white;
+border:none;
+padding:15px 25px;
+margin-top:15px;
+cursor:pointer;
+}
+
+/* PRODUCTOS */
+
+.productos{
+padding:60px;
+text-align:center;
+background:#f5f5f5;
+}
+
+.contenedor-productos{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+width:220px;
+box-shadow:0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+}
+
+.precio{
+color:red;
+font-weight:bold;
+margin:10px 0;
+}
+
+.card button{
+background:gold;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+.hero{
+height:500px;
+background-image:url("../imagenes/poner img");
+background-size:cover;
+background-position:center;
+}
+/* BANNER MOTOS */
+
+.motos-banner{
+height:350px;
+background:url("../imagenes/moto_enduro.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:80px;
+color:white;
+margin-top:50px;
+}
+
+.contenido-banner h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.btn-motos{
+background:#ffd000;
+padding:12px 25px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+border-radius:5px;
+}
+.contenedor-galeria{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.contenedor-galeria img{
+width:220px;
+border-radius:8px;
+}
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+.card{
+background:white;
+padding:20px;
+width:200px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 25px rgba(0,0,0,0.3);
+}
+.card img{
+width:100%;
+transition:0.3s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+.card button{
+background:black;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card button:hover{
+background:#ffd000;
+color:black;
+}
+.aparecer{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
+}
+
+.aparecer.visible{
+opacity:1;
+transform:translateY(0);
+}
+header{
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+transition: 0.3s;
+z-index: 1000;
+}
+
+header.scrolled{
+background: black;
+box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+padding: 15px 50px;
+}
+.card{
+transition: transform 0.3s, box-shadow 0.3s;
+cursor: pointer;
+}
+
+.card:hover{
+transform: translateY(-10px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.hero{
+height: 90vh;
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url("../static/imagenes/motohero.jpg");
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+padding-left: 60px;
+color: white;
+}
+.whatsapp{
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+font-size: 30px;
+padding: 15px;
+border-radius: 50%;
+text-decoration: none;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+transition: 0.3s;
+}
+
+.whatsapp:hover{
+transform: scale(1.1);
+}

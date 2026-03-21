@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolves Garage & Racing</title>
+    <link rel="stylesheet" href="../static/css/stile.css">
+    <link rel="icon" href="../static/imagenes/lobo_mecanico.png">
+</head>
+<body>
+    <!-- HEADER -->
+<header>
+<div class="logo">
+Wolves <span>Garage & Racing</span>
+</div>
+
+<nav>
+<ul>
+<li>Inicio</li>
+<li>Repuestos</li>
+<li>Motos</li>
+<li>Servicios</li>
+<li>Contacto</li>
+</ul>
+</nav>
+</header>
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-texto">
+<h1>Repuestos y Accesorios<br>para tu <span>Moto</span></h1>
+<p>Compra rápido y seguro al mejor precio</p>
+
+<button class="btn-wsp">Cotiza por WhatsApp</button>
+</div>
+
+</section>
+
+
+<!-- PRODUCTOS -->
+<section class="productos">
+
+<h2>Repuestos Destacados</h2>
+
+<div class="contenedor-productos">
+
+<div class="card aparecer">
+<img src="aceite.jpg">
+<h3>Aceite Motul 10W40</h3>
+<p class="precio">$45.000</p>
+<button>Ver más</button>
+</div>
+
+<div class="card aparecer">
+<img src="kit.jpg">
+<h3>Kit de Arrastre</h3>
+<p class="precio">$120.000</p>
+<button>Ver más</button>
+</div>
+
+<div class="card aparecer">
+<img src="frenos.jpg">
+<h3>Pastillas de Freno</h3>
+<p class="precio">$35.000</p>
+<button>Ver más</button>
+</div>
+
+<div class="card aparecer">
+<img src="llantas.jpg">
+<h3>Llantas para Moto</h3>
+<p class="precio">$180.000</p>
+<button>Ver más</button>
+</div>
+
+</div>
+
+</section>
+<!-- MOTOS USADAS -->
+<section class="motos-banner">
+
+<div class="contenido-banner">
+<h2>Motos Usadas en Venta</h2>
+<a href="#" class="btn-motos">Ver Motos</a>
+</div>
+
+</section>
+<section class="galeria">
+
+<h2>Trabajos Realizados</h2>
+
+<div class="contenedor-galeria">
+
+<img src="../static/imagenes/moto1.jpg">
+<img src="../static/imagenes/moto2.jpg">
+<img src="../static/imagenes/moto3.jpg">
+<img src="../static/imagenes/moto4.jpg">
+
+</div>
+
+</section>
+<a href="https://wa.me/573001234567" class="whatsapp">
+💬
+</a>
+<footer>
+
+<div class="footer-contenido">
+
+<div>
+<h3>Wolves Garage & Racing</h3>
+<p>Especialistas en motos y rendimiento.</p>
+</div>
+
+<div>
+<h3>Ubicación</h3>
+<p>Medellín - Colombia</p>
+</div>
+
+<div>
+<h3>Contacto</h3>
+<p>WhatsApp: 310 670 9407</p>
+</div>
+
+</div>
+
+</footer>
+<script>
+
+const elementos = document.querySelectorAll('.aparecer');
+
+function mostrarElementos(){
+
+const alturaPantalla = window.innerHeight;
+
+elementos.forEach(el =>{
+
+const distancia = el.getBoundingClientRect().top;
+
+if(distancia < alturaPantalla - 50){
+el.classList.add("visible");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", mostrarElementos);
+
+</script>
+<audio id="sonidoMoto" src="../static/audio/aceleracion.mp3"></audio>
+<script>
+
+const sonido = document.getElementById("sonidoMoto");
+const menuItems = document.querySelectorAll("nav li");
+
+menuItems.forEach(item => {
+
+item.addEventListener("mouseenter", () => {
+
+sonido.currentTime = 0;
+sonido.play();
+
+});
+
+});
+
+</script>
+<script>
+    const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 50){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
+
+});
+</script>
+
+
+</body>
+
+
+</html>
