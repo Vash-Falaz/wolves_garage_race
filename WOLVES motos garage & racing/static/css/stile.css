@@ -1,241 +1,275 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
 }
 
 /* HEADER */
 
 header{
-background:black;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+header.scrolled{
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  padding: 15px 50px;
 }
 
 nav ul{
-display:flex;
-list-style:none;
-gap:25px;
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ffd000;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+  color:white;
 }
 
 /* HERO */
 
 .hero{
-height:500px;
-background-image:url("moto.jpg");
-background-size:cover;
-display:flex;
-align-items:center;
-padding-left:80px;
-color:white;
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("../imagenes/Motocicleta_deportiva_en_taller_oscuro.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  color: white;
+}
+
+.hero h1{
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero p{
+  font-size: 18px;
+  opacity: 0.9;
 }
 
 .hero span{
-color:gold;
+  color:gold;
 }
 
+/* BOTÓN WHATSAPP */
+
 .btn-wsp{
-background:green;
-color:white;
-border:none;
-padding:15px 25px;
-margin-top:15px;
-cursor:pointer;
+  background:#25D366;
+  color:white;
+  padding:15px 25px;
+  border-radius:5px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+  display:inline-block;
+  text-decoration:none;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-wsp:hover{
+  transform:scale(1.05);
 }
 
 /* PRODUCTOS */
 
 .productos{
-padding:60px;
-text-align:center;
-background:#f5f5f5;
+  padding:60px;
+  text-align:center;
+  background:#f5f5f5;
 }
 
 .contenedor-productos{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:40px;
+  margin-top:40px;
+  padding:0 40px;
+  align-items: start;
 }
+
+/* CARD LIMPIA */
 
 .card{
-background:white;
-padding:20px;
-width:220px;
-box-shadow:0px 5px 10px rgba(0,0,0,0.1);
-}
+  background: #111;
+  color: #fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
 
-.card img{
-width:100%;
-}
-
-.precio{
-color:red;
-font-weight:bold;
-margin:10px 0;
-}
-
-.card button{
-background:gold;
-border:none;
-padding:10px;
-cursor:pointer;
-}
-.hero{
-height:500px;
-background-image:url("../imagenes/poner img");
-background-size:cover;
-background-position:center;
-}
-/* BANNER MOTOS */
-
-.motos-banner{
-height:350px;
-background:url("../imagenes/moto_enduro.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding-left:80px;
-color:white;
-margin-top:50px;
-}
-
-.contenido-banner h2{
-font-size:36px;
-margin-bottom:15px;
-}
-
-.btn-motos{
-background:#ffd000;
-padding:12px 25px;
-text-decoration:none;
-color:black;
-font-weight:bold;
-border-radius:5px;
-}
-.contenedor-galeria{
-display:flex;
-gap:15px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.contenedor-galeria img{
-width:220px;
-border-radius:8px;
-}
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-}
-.card{
-background:white;
-padding:20px;
-width:200px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 25px rgba(0,0,0,0.3);
-}
-.card img{
-width:100%;
-transition:0.3s;
+  transform:translateY(-10px);
+  box-shadow:0 15px 25px rgba(0,0,0,0.3);
 }
 
-.card:hover img{
-transform:scale(1.05);
+.card img {
+  max-width: 300px;
+  height: 400px;
+  display: block;
+  margin: 0 auto; 
+  object-fit: cover;
+  display: block;
 }
+
+
 .card button{
-background:black;
-color:white;
-border:none;
-padding:10px;
-cursor:pointer;
-transition:0.3s;
+  background:black;
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
 .card button:hover{
-background:#ffd000;
-color:black;
+  background:#ffd000;
+  color:black;
 }
+
+.precio{
+  color:#ff3b3b;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+/* INFO EXTRA (VER MÁS) */
+
+.info-extra{
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card.active .info-extra{
+  max-height: 400px;
+  margin-top:10px;
+}
+
+/* LISTAS */
+
+.lista{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:0;
+}
+
+.lista li{
+  list-style:none;
+  background:#111;
+  padding:5px 10px;
+  border-radius:5px;
+  font-size:13px;
+  color:#ccc;
+}
+
+/* ANIMACIONES */
+
 .aparecer{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.6s ease;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.6s ease;
 }
 
 .aparecer.visible{
-opacity:1;
-transform:translateY(0);
-}
-header{
-position: fixed;
-width: 100%;
-top: 0;
-left: 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-transition: 0.3s;
-z-index: 1000;
+  opacity:1;
+  transform:translateY(0);
 }
 
-header.scrolled{
-background: black;
-box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-padding: 15px 50px;
-}
-.card{
-transition: transform 0.3s, box-shadow 0.3s;
-cursor: pointer;
-}
+/* WHATSAPP FLOAT */
 
-.card:hover{
-transform: translateY(-10px);
-box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-.hero{
-height: 90vh;
-background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-url("../static/imagenes/motohero.jpg");
-background-size: cover;
-background-position: center;
-display: flex;
-align-items: center;
-padding-left: 60px;
-color: white;
-}
 .whatsapp{
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25D366;
-color: white;
-font-size: 30px;
-padding: 15px;
-border-radius: 50%;
-text-decoration: none;
-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-transition: 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
 .whatsapp:hover{
-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+  nav ul{
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  nav ul.active{
+    display: flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .hero{
+    padding:20px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+}
+.card{
+  height: fit-content;
+}
+
+.contenedor-productos{
+  align-items: start;
+}
+.servicios h2 {
+  text-align: center;
+  margin-bottom: 40px; 
 }
